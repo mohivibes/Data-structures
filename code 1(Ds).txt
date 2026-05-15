@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<string.h>
+struct student{
+    int rollno;
+    char name[50];
+    float percentage;
+};
+int main()
+{
+    //method 1
+    struct student s1;
+    s1.rollno = 54;
+    s1.percentage = 90.84;
+    strcpy(s1.name,"hary");
+    printf("%d %f %s",s1.rollno,s1.percentage,s1.name);
+    
+    // method 2
+    struct student s2 = { 54,"mark",98.65};
+    printf("\n %d %s %f",s2.rollno,s2.name,s2.percentage);
+    
+    // method 3
+    struct student s3={
+        .name="mohith",
+        .rollno=50,
+        .percentage=25.87
+    };
+    printf("\n %s %d %f",s3.name,s3.rollno,s3.percentage);
+    return 0;
+    
+}

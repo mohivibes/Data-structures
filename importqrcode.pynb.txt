@@ -1,0 +1,3 @@
+import qrcode
+img = qrcode.make("https://adityauniversity.in")
+img.show()

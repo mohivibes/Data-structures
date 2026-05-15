@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<string.h>
+struct book{
+    char title[100];
+    char author[100];
+    float price;
+    int pages;
+};
+int main()
+{
+    struct book b1;
+   scanf("%s %s %f %d",&b1.title,&b1.author,&b1.price,&b1.pages);
+    printf("Title : %s\nAuthor : %s\nPrice : %.2f\nPages : %d",b1.title,b1.author,b1.price,b1.pages);
+    if(b1.price > 500)
+    {
+        printf("\nExpensive");
+    }
+    else
+    {
+        printf("\nAffordable");
+    }
+    return 0;
+}
+
+input : Adventure Shakespeare 499.98 300
